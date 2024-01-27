@@ -15,62 +15,61 @@
   <body>
     <script type="module" src="/main.js"></script>
   </body>
-  <header class="primary-header">
-    <div class="container">
-      <div class="nav-wrapper">
-        <a href="#">
-          <svg class="logo" width="146" height="24">
-            <use xlink:href="images/logo.svg#logo"></use>
-          </svg>
-        </a>
-        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-          <span class="visually-hidden">Menu</span>
-        </button>
-        <nav class="primary-navigation" id="primary-navigation">
-          <ul aria-label="Primary" role="list" class="nav-list">
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Product</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Community</a></li>
-          </ul>
-        </nav>
-        <button class="button | display-sm-none display-md-inline-flex">Get Started</button>
-      </div>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container">
-      <div class="even-columns">
-        <div>
-          <h1 class="text-primary-400 fs-primary-heading fw-bold">FRONT-END DEVELOPER</h1>
-        </div>
-        <div class="hero-image">
-          <img src="images/ME.png" alt="" />
-        </div>
-        <div class="flow">
-          <hr />
-          <p>Hello! I'm John Orland Prane, a front-end developer from the Philippines.</p>
-
-          <p>I'm here to bring your vision to life. Let's explore the possibilities and turn your ideas into reality</p>
-
-          <button class="button">Download CV</button>
+  <div class="bg-accent-100">
+    <header class="primary-header">
+      <div class="container margin-bottom-700">
+        <div class="nav-wrapper">
+          <a href="#" class="logo">
+            <img src="images/logo.png" alt="" />
+          </a>
+          <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="visually-hidden">Menu</span>
+          </button>
+          <nav class="primary-navigation" id="primary-navigation">
+            <ul aria-label="Primary" role="list" class="nav-list">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Me</a></li>
+              <li><a href="#">Projects</a></li>
+            </ul>
+          </nav>
+          <button class="button | display-sm-none display-md-inline-flex">Get Started</button>
         </div>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <section class="tech-stack">
+    <section class="hero margin-bottom-700">
+      <div class="container">
+        <div class="even-columns hero-wrapper">
+          <div>
+            <h1 class="hero-area text-primary-400 fs-primary-heading fw-bold text-center">FRONT-END DEVELOPER</h1>
+          </div>
+          <div class="hero-image image-area">
+            <img src="images/ME.png" alt="" />
+          </div>
+          <div class="paragraph-area | flow" style="align-self: center; justify-self: center">
+            <hr class="custom-hr" />
+            <p>Hello! I'm John Orland Prane, a front-end developer from the Philippines.</p>
+
+            <p>I'm here to bring your vision to life. Let's explore the possibilities and turn your ideas into reality</p>
+
+            <button class="button">Download CV</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <section class="tech-stack margin-bottom-700">
     <div class="container">
-      <div class="even-columns">
-        <h3 class="text-primary-400 fs-size-400">tech-stack</h3>
-        <div class="box-tech-icon">html</div>
-        <div class="box-tech-icon">html</div>
-        <div class="box-tech-icon">html</div>
-        <div class="box-tech-icon">html</div>
-        <div class="box-tech-icon">html</div>
-        <div class="box-tech-icon">html</div>
+      <h3 class="fs-secondary-heading vertical-align-center fw-bold">SKILLS</h3>
+      <div class="even-columns-skills">
+        <div class="box-tech-icon"><img src="svg/html.svg" alt="html" /></div>
+        <div class="box-tech-icon"><img src="svg/css.svg" alt="css" /></div>
+        <div class="box-tech-icon"><img src="svg/js.svg" alt="javascript" /></div>
+        <div class="box-tech-icon"><img src="svg/vite.svg" alt="" /></div>
+        <div class="box-tech-icon"><img src="svg/git.svg" alt="" /></div>
+        <div class="box-tech-icon"><img src="svg/vscode.svg" alt="" /></div>
+        <div class="box-tech-icon"><img src="svg/bootstrap.svg" alt="" /></div>
+        <div class="box-tech-icon"><img src="svg/github.svg" alt="" /></div>
       </div>
     </div>
   </section>
@@ -163,4 +162,5 @@
       <hr />
     </div>
   </footer>
+  <script type="module" src="/main.js"></script>
 </html>
