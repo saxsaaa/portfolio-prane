@@ -9,3 +9,13 @@ navToggle.addEventListener("click", () => {
   primaryNav.toggleAttribute("data-visible");
   primaryHeader.toggleAttribute("data-overlay");
 });
+
+$(document).ready(function () {
+  $("li").click(function (event) {
+    var socialMediaLink = $(this).find("a").attr("href");
+    if (socialMediaLink) {
+      event.preventDefault(); // Prevent the default behavior of the link
+      window.open(socialMediaLink, "_blank"); // Open link in a new tab
+    }
+  });
+});

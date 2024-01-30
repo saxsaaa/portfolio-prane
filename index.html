@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="images/tab-logo-v2.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -10,157 +10,186 @@
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet" />
     <!-- css -->
     <link rel="stylesheet" href="style.css" />
-    <title>Portfolio</title>
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <title>John Orland Prane</title>
   </head>
   <body>
-    <script type="module" src="/main.js"></script>
-  </body>
-  <div class="bg-accent-100">
-    <header class="primary-header">
-      <div class="container margin-bottom-700">
-        <div class="nav-wrapper">
-          <a href="#" class="logo">
-            <img src="images/logo.png" alt="" />
-          </a>
-          <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-            <span class="visually-hidden">Menu</span>
-          </button>
-          <nav class="primary-navigation" id="primary-navigation">
-            <ul aria-label="Primary" role="list" class="nav-list">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Me</a></li>
-              <li><a href="#">Projects</a></li>
-            </ul>
-          </nav>
-          <button class="button | display-sm-none display-md-inline-flex">Get Started</button>
+    <div class="landing-page-bg | bg-accent-100">
+      <header class="primary-header">
+        <div class="container margin-bottom-700">
+          <div class="nav-wrapper">
+            <a href="#" class="logo">
+              <img src="images/logo.png" alt="" />
+            </a>
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+              <span class="visually-hidden">Menu</span>
+            </button>
+            <nav class="primary-navigation" id="primary-navigation">
+              <ul aria-label="Primary" role="list" class="nav-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Projects</a></li>
+              </ul>
+            </nav>
+            <button class="button | display-sm-none display-md-inline-flex">Get Started</button>
+          </div>
+        </div>
+      </header>
+
+      <section class="hero margin-bottom-700">
+        <div class="container">
+          <div class="even-columns hero-wrapper">
+            <div class="flow hero-text">
+              <div class="paragraph-area">
+                <h1 class="hero-area text-primary-400 fs-primary-heading fw-bold">FRONT-END DEVELOPER</h1>
+
+                <div class="social-icons">
+                  <hr class="custom-hr" />
+                  <ul>
+                    <li id="facebookIcon">
+                      <a href="https://www.facebook.com/j.orlxnd/" target="_blank">
+                        <i class="fa-brands fa-facebook-f"></i>
+                      </a>
+                    </li>
+                    <li id="twitterIcon">
+                      <a href="https://twitter.com/J_orlxnd" target="_blank">
+                        <i class="fa-brands fa-twitter"></i>
+                      </a>
+                    </li>
+                    <li id="instagramIcon">
+                      <a href="https://www.instagram.com/j.orlxnd/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                      </a>
+                    </li>
+                    <li id="githubIcon">
+                      <a href="https://github.com/saxsaaa" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <p>Hello! I'm John Orland Prane, a front-end developer from the Philippines.</p>
+
+                <p>I'm here to bring your vision to life. Let's explore the possibilities and turn your ideas into reality</p>
+
+                <button class="button">Contact Me</button>
+              </div>
+            </div>
+
+            <div class="hero-image image-area">
+              <img src="images/ME.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="tech-stack margin-bottom-700">
+      <div class="container">
+        <h3 class="fs-secondary-heading vertical-align-center fw-bold text-center margin-bottom-700">SKILLS</h3>
+        <div class="even-columns-skills">
+          <div class="box-tech-icon"><img src="svg/html.svg" alt="html" /></div>
+          <div class="box-tech-icon"><img src="svg/css.svg" alt="css" /></div>
+          <div class="box-tech-icon"><img src="svg/js.svg" alt="javascript" /></div>
+          <div class="box-tech-icon"><img src="svg/vite.svg" alt="" /></div>
+          <div class="box-tech-icon"><img src="svg/git.svg" alt="" /></div>
+          <div class="box-tech-icon"><img src="svg/vscode.svg" alt="" /></div>
+          <div class="box-tech-icon"><img src="svg/bootstrap.svg" alt="" /></div>
+          <div class="box-tech-icon"><img src="svg/github.svg" alt="" /></div>
         </div>
       </div>
-    </header>
+    </section>
 
-    <section class="hero margin-bottom-700">
+    <section>
       <div class="container">
-        <div class="even-columns hero-wrapper">
+        <div class="text-primary-400 fs-secondary-heading text-center">Projects</div>
+        <div class="even-columns margin-bottom-700">
+          <div><img src="images/mockup.png" alt="" /></div>
           <div>
-            <h1 class="hero-area text-primary-400 fs-primary-heading fw-bold text-center">FRONT-END DEVELOPER</h1>
+            <p class="text-primary-400 fw-bold">Web Applications</p>
+            <p class="text-primary-400 fw-bold fs-600">Sample Project</p>
+            <p>
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+              of type and
+            </p>
+            <button class="button">visit</button>
           </div>
-          <div class="hero-image image-area">
-            <img src="images/ME.png" alt="" />
+        </div>
+        <div class="even-columns margin-bottom-700">
+          <div>
+            <p class="text-primary-400 fw-bold">Web Applications</p>
+            <p class="text-primary-400 fw-bold fs-600">Sample Project</p>
+            <p>
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+              of type and
+            </p>
+            <button class="button">visit</button>
           </div>
-          <div class="paragraph-area | flow" style="align-self: center; justify-self: center">
-            <hr class="custom-hr" />
-            <p>Hello! I'm John Orland Prane, a front-end developer from the Philippines.</p>
-
-            <p>I'm here to bring your vision to life. Let's explore the possibilities and turn your ideas into reality</p>
-
-            <button class="button">Download CV</button>
+          <div><img src="images/mockup.png" alt="" /></div>
+        </div>
+        <div class="even-columns margin-bottom-700">
+          <div><img src="images/mockup.png" alt="" /></div>
+          <div>
+            <p class="text-primary-400 fw-bold">Web Applications</p>
+            <p class="text-primary-400 fw-bold fs-600">Sample Project</p>
+            <p>
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+              of type and
+            </p>
+            <button class="button">visit</button>
           </div>
         </div>
       </div>
     </section>
-  </div>
-  <section class="tech-stack margin-bottom-700">
-    <div class="container">
-      <h3 class="fs-secondary-heading vertical-align-center fw-bold">SKILLS</h3>
-      <div class="even-columns-skills">
-        <div class="box-tech-icon"><img src="svg/html.svg" alt="html" /></div>
-        <div class="box-tech-icon"><img src="svg/css.svg" alt="css" /></div>
-        <div class="box-tech-icon"><img src="svg/js.svg" alt="javascript" /></div>
-        <div class="box-tech-icon"><img src="svg/vite.svg" alt="" /></div>
-        <div class="box-tech-icon"><img src="svg/git.svg" alt="" /></div>
-        <div class="box-tech-icon"><img src="svg/vscode.svg" alt="" /></div>
-        <div class="box-tech-icon"><img src="svg/bootstrap.svg" alt="" /></div>
-        <div class="box-tech-icon"><img src="svg/github.svg" alt="" /></div>
-      </div>
-    </div>
-  </section>
 
-  <section>
-    <div class="container">
-      <div class="text-primary-400 fs-secondary-heading text-center">Projects</div>
-      <div class="even-columns margin-bottom-700">
-        <div><img src="images/mockup.png" alt="" /></div>
-        <div>
-          <p class="text-primary-400 fw-bold">Web Applications</p>
-          <p class="text-primary-400 fw-bold fs-600">Sample Project</p>
-          <p>
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-            type and
-          </p>
-          <button class="button">visit</button>
+    <section>
+      <div class="container">
+        <div class="even-columns margin-bottom-700">
+          <div>
+            <img src="images/profile-pic.png" alt="" />
+          </div>
+          <div>
+            <h3 class="fs-secondary-heading fw-bold text-primary-400">About me</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem ex enim sint adipisci alias saepe dicta nam
+              vero quas modi, quae quibusdam, laborum ducimus voluptas voluptatibus consectetur illo nemo eum.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, officia. Quos, cumque vel eveniet molestiae
+              reiciendis odio ipsum consectetur et tempore quasi repellat dolor, dolores placeat libero incidunt optio fuga. Natus
+              laboriosam quam aliquam quia atque unde delectus magni dolorum, suscipit cupiditate vel facere nulla qui ex quidem
+              culpa perferendis officia dolorem, voluptates provident incidunt illum sint. Delectus, consequatur facere!
+              Voluptatibus at esse veniam enim aliquam asperiores amet, quidem quasi laboriosam veritatis inventore dolorem vero
+              aspernatur quisquam molestiae atque? Sequi expedita delectus laborum est, provident iure nobis fugit et voluptatum.
+            </p>
+          </div>
         </div>
       </div>
-      <div class="even-columns margin-bottom-700">
-        <div>
-          <p class="text-primary-400 fw-bold">Web Applications</p>
-          <p class="text-primary-400 fw-bold fs-600">Sample Project</p>
-          <p>
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-            type and
-          </p>
-          <button class="button">visit</button>
-        </div>
-        <div><img src="images/mockup.png" alt="" /></div>
-      </div>
-      <div class="even-columns margin-bottom-700">
-        <div><img src="images/mockup.png" alt="" /></div>
-        <div>
-          <p class="text-primary-400 fw-bold">Web Applications</p>
-          <p class="text-primary-400 fw-bold fs-600">Sample Project</p>
-          <p>
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-            type and
-          </p>
-          <button class="button">visit</button>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section>
-    <div class="container">
-      <div class="even-columns margin-bottom-700">
-        <div>
-          <img src="images/profile-pic.png" alt="" />
+    <footer class="bg-primary-400">
+      <div class="container text-neutral-100">
+        <div class="even-columns">
+          <div>
+            <p>LIKE WHAT YOU SEE?</p>
+            <p>LET’S WORK TOGETHER</p>
+            <p>Drop me a line or two, I’m open for creative minds and collaborations!</p>
+            <button class="button">email me</button>
+          </div>
+          <div>
+            <p>MISSING SOMETHING</p>
+            <h3>menu</h3>
+            <p>home</p>
+            <p>projects</p>
+            <p>about</p>
+          </div>
+          <div></div>
         </div>
-        <div>
-          <h3 class="fs-secondary-heading fw-bold text-primary-400">About me</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem ex enim sint adipisci alias saepe dicta nam vero
-            quas modi, quae quibusdam, laborum ducimus voluptas voluptatibus consectetur illo nemo eum.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, officia. Quos, cumque vel eveniet molestiae
-            reiciendis odio ipsum consectetur et tempore quasi repellat dolor, dolores placeat libero incidunt optio fuga. Natus
-            laboriosam quam aliquam quia atque unde delectus magni dolorum, suscipit cupiditate vel facere nulla qui ex quidem
-            culpa perferendis officia dolorem, voluptates provident incidunt illum sint. Delectus, consequatur facere!
-            Voluptatibus at esse veniam enim aliquam asperiores amet, quidem quasi laboriosam veritatis inventore dolorem vero
-            aspernatur quisquam molestiae atque? Sequi expedita delectus laborum est, provident iure nobis fugit et voluptatum.
-          </p>
-        </div>
+        <hr />
       </div>
-    </div>
-  </section>
-
-  <footer class="bg-primary-400">
-    <div class="container text-neutral-100">
-      <div class="even-columns">
-        <div>
-          <p>LIKE WHAT YOU SEE?</p>
-          <p>LET’S WORK TOGETHER</p>
-          <p>Drop me a line or two, I’m open for creative minds and collaborations!</p>
-          <button class="button">email me</button>
-        </div>
-        <div>
-          <p>MISSING SOMETHING</p>
-          <h3>menu</h3>
-          <p>home</p>
-          <p>projects</p>
-          <p>about</p>
-        </div>
-        <div></div>
-      </div>
-      <hr />
-    </div>
-  </footer>
+    </footer>
+  </body>
   <script type="module" src="/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </html>
