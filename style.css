@@ -2,7 +2,7 @@
   --clr-accent-500: hsl(210, 55%, 18%);
   --clr-accent-400: hsl(210, 68%, 20%);
   --clr-accent-300: #fc6736;
-  --clr-accent-100: #efecec;
+  --clr-accent-100: #f7f5f5;
 
   --clr-primary-400: #0c2d57;
 
@@ -268,14 +268,14 @@ p:not([class]) {
   display: grid;
   place-items: center;
   width: auto;
-  height: auto; /* Set a specific height for the grid container, adjust as needed */
+  height: auto;
 }
 
 .hero-image img {
-  max-width: 90%; /* Limit the maximum width of the image to 100% of its container */
-  max-height: 100%; /* Limit the maximum height of the image to 100% of its container */
-  width: auto; /* Allow the image to scale proportionally based on the specified max-width */
-  height: auto; /* Allow the image to scale proportionally based on the specified max-height */
+  max-width: 90%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   padding-top: var(--size-600);
 }
 
@@ -287,6 +287,9 @@ p:not([class]) {
 }
 
 /* social list */
+/* .hero-wrapper {
+  margin-top: 160px;
+} */
 .custom-hr {
   width: 8em;
   height: 0.2em;
@@ -329,30 +332,18 @@ p:not([class]) {
 .social-icons a {
   color: var(--clr-neutral-100);
 }
-@media (max-width: 52em) {
-  .custom-hr {
-    width: 4em;
-  }
-}
-
-@media (max-width: 47em) {
-  .custom-hr {
-    width: 4em;
-  }
-}
-
-@media (max-width: 20em) {
-  .custom-hr {
-    width: 0;
-  }
+.hero-image img {
+  margin-top: 16.375rem;
 }
 
 .image-area {
   background-image: url("svg/circle.svg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 115%;
   background-position: center top;
+  box-sizing: border-box;
 }
+
 @media (max-width: 80em) {
   .hero h1 {
     font-size: 2.5em;
@@ -364,6 +355,12 @@ p:not([class]) {
     height: auto;
   }
 }
+@media (max-width: 52em) {
+  .custom-hr {
+    width: 4em;
+  }
+}
+
 @media (max-width: 47em) {
   .image-area {
     grid-area: image;
@@ -386,6 +383,7 @@ p:not([class]) {
     max-height: 100%;
     width: auto; /* Allow the image to scale proportionally based on the specified max-width */
     height: auto;
+    margin-top: 0rem;
   }
 
   .hero h1 {
@@ -394,8 +392,15 @@ p:not([class]) {
   .hero p {
     max-width: 80ch;
   }
+  .custom-hr {
+    width: 4em;
+  }
 }
-
+@media (max-width: 20em) {
+  .custom-hr {
+    width: 0;
+  }
+}
 /* skills */
 .box-tech-icon {
   background-color: var(--clr-primary-400);
@@ -467,6 +472,106 @@ p:not([class]) {
     padding: var(--size-400);
   }
 }
+
+/* Footer */
+.footer-wrapper {
+  padding: var(--size-800) 0;
+}
+
+.footer-text-area {
+  line-height: 1.4rem;
+  letter-spacing: 0.1rem;
+}
+.secondary-nav-area {
+  line-height: 1.7rem;
+  text-align: right;
+  letter-spacing: 0.2rem;
+  padding: 0 var(--size-600);
+  transition: 0.5s;
+}
+
+.contacts-area {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+}
+
+.contacts-area a {
+  text-decoration: none;
+  color: var(--clr-primary-400);
+}
+
+.contacts-area a:hover,
+.contacts-area a:focus-within {
+  text-decoration: none;
+  color: var(--clr-neutral-100);
+}
+
+.contacts-card {
+  width: 18rem;
+  height: 100%;
+  padding: var(--size-400);
+  display: grid;
+  align-items: center;
+  border-radius: 8px;
+  background-color: var(--clr-accent-100);
+  color: var(--clr-primary-400);
+
+  cursor: pointer;
+}
+.contacts-label {
+  margin: 0 1.25rem 0 1.25rem;
+}
+
+.contacts-card:hover .mail-area a,
+.contacts-card:hover,
+.contacts-card:focus-visible {
+  background-color: var(--clr-accent-300);
+  color: var(--clr-neutral-100);
+}
+
+.contacts-card a:hover,
+.contacts-card a:focus-visible {
+  color: var(--clr-neutral-100);
+}
+.footer-custom-hr {
+  width: 100%;
+  height: 0.1em;
+  background-color: var(--clr-neutral-100);
+}
+@media (max-width: 56rem) {
+  .secondary-nav-area {
+    text-align: center;
+    padding: 0;
+  }
+}
+@media (max-width: 47em) {
+  .contactss-area {
+    padding: 0;
+  }
+  .contacts-card {
+    max-width: 100%;
+    width: 15rem;
+
+    height: 100%;
+  }
+  .contacts-label {
+    margin: 0;
+  }
+  .contacts-label {
+    margin: 0;
+  }
+  .contacts-area {
+    padding: 0;
+  }
+
+  .secondary-nav-area {
+    text-align: center;
+  }
+  .footer-text-area {
+    text-align: center;
+  }
+}
 /* utility classes */
 
 .visually-hidden {
@@ -497,7 +602,9 @@ p:not([class]) {
 .text-neutral-100 {
   color: var(--clr-neutral-100);
 }
-
+.text-neutral-200 {
+  color: var(--clr-neutral-200);
+}
 .text-neutral-900 {
   color: var(--clr-neutral-900);
 }
@@ -571,7 +678,9 @@ p:not([class]) {
 .margin-bottom-700 {
   margin-block-end: var(--size-700);
 }
-
+.margin-bottom-300 {
+  margin-block-end: var(--size-300);
+}
 .margin-top-900 {
   margin-block-start: var(--size-900);
 }
@@ -631,6 +740,9 @@ p:not([class]) {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
 .text-center p {
   margin-inline: auto;
 }
