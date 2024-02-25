@@ -206,8 +206,8 @@ p:not([class]) {
     position: fixed;
 
     padding: var(--size-600);
-    inset: 5rem var(--size-400) auto;
-    max-width: 35rem;
+    inset: 1rem 0rem auto auto;
+    width: 25rem;
     margin-inline: auto;
     background: var(--clr-neutral-100);
     border-radius: var(--size-100);
@@ -256,8 +256,6 @@ p:not([class]) {
 
   .mobile-nav-toggle[aria-expanded="true"] {
     background-image: url("images/icon-close.svg");
-    right: calc(var(--size-400) + var(--size-close-icon-offset));
-    top: calc(var(--size-600) + var(--vertical-close-icon-offset));
 
     z-index: 1;
   }
