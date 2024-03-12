@@ -25,7 +25,7 @@
   --fs-600: 1rem;
   --fs-700: 1.875rem;
   --fs-800: 2.5rem;
-  --fs-900: 4.5rem;
+  --fs-900: 5.3rem;
 
   --fs-body: var(--fs-400);
   --fs-primary-heading: var(--fs-900);
@@ -132,7 +132,7 @@ body {
 }
 
 p:not([class]) {
-  max-width: 42ch;
+  max-width: 53ch;
 }
 
 .button {
@@ -155,36 +155,100 @@ p:not([class]) {
 /* nav bar */
 
 .primary-header {
-  padding-top: var(--size-600);
+  top: 0;
+  width: 100%;
+  padding-top: var(--size-200);
+  padding-bottom: var(--size-200);
+  background-color: rgba(226, 226, 226); /* Adjust the transparency as needed */
+  backdrop-filter: blur(10px);
+  transition: background-color 0.3s ease;
+  z-index: 1000; /* Ensure the navbar stays above other elements */
 }
+
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.mobile-nav-toggle {
-  display: none;
+
+.nav-toggle {
+  display: flex;
+  gap: 1rem;
+  place-items: center;
+  aspect-ratio: 1;
+  z-index: 4;
+}
+.toggle-text {
+  color: var(--clr-primary-400); /* Set the initial color */
 }
 
+.primary-navigation[data-visible] + .nav-wrapper .toggle-text {
+  color: white; /* Change the color to white when the navigation is visible */
+}
 .mobile-nav-toggle {
+  display: flex;
   cursor: pointer;
   background: transparent;
   border: 0;
   padding: 0.5em;
+  width: 1.65em;
+  aspect-ratio: 1;
+
+  background-image: url("images/icon-hamburger.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.mobile-nav-toggle -close {
+.mobile-nav-toggle-close {
   display: none;
 }
-.nav-list {
+
+.logo {
+  width: 5em;
+  height: 4em;
   display: flex;
-  gap: clamp(var(--size-400), 5vw, var(--size-700));
-  font-weight: var(--fw-semi-bold);
+  align-items: center;
+  z-index: 4;
 }
 
+.nav-list {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  place-content: center;
+  gap: var(--size-400);
+  text-align: center;
+  font-weight: var(--fw-bold);
+  font-size: 3rem;
+  opacity: 1;
+}
+.nav-item {
+  opacity: 1;
+}
+.nav-item:after {
+  content: "";
+  position: absolute;
+  border-bottom: 2px solid var(--clr-accent-300);
+  top: 100%;
+  transition: all 0.6s;
+}
+
+.nav-item:after {
+  right: 100%;
+  left: 0;
+}
+.nav-item:hover:after {
+  right: 0;
+}
+.nav-list p {
+  font-size: 1.5rem;
+  font-weight: var(--fw-regular);
+  color: var(--clr-neutral-100);
+}
 .nav-list a {
   text-decoration: none;
-  color: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
 }
 
 .nav-list a:hover,
@@ -193,75 +257,56 @@ p:not([class]) {
   color: var(--clr-accent-300);
 }
 
-.logo {
-  width: 5em;
-  height: 4em;
-  display: flex;
-  align-items: center;
+.primary-navigation {
+  visibility: hidden;
+  transform: translateY(2000px); /* Use translateY instead of y for GSAP */
+  position: fixed;
+  padding: var(--size-600);
+  inset: 0rem 0rem auto auto;
+  width: 100vw;
+  height: 100vh;
+  margin-inline: auto;
+  background: var(--clr-primary-400);
+  transition: visibility 5s; /* Added transform property */
+  z-index: -1;
 }
 
-@media (max-width: 47em) {
-  .primary-navigation {
-    display: none;
-    position: fixed;
-
-    padding: var(--size-600);
-    inset: 1rem 0rem auto auto;
-    width: 25rem;
-    margin-inline: auto;
-    background: var(--clr-neutral-100);
-    border-radius: var(--size-100);
-    box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.05);
-  }
-
-  .nav-list {
-    display: grid;
-    gap: var(--size-600);
-    text-align: center;
-    text-align: center;
-    font-weight: var(--fw-bold);
-  }
-
-  .nav-list a {
-    text-decoration: none;
-    color: var(--clr-primary-400);
-  }
-
-  .nav-list a:hover,
-  .nav-list a:focus {
-    text-decoration: none;
-    color: var(--clr-accent-400);
-  }
-
-  .primary-navigation[data-visible] {
-    display: block;
-  }
-  .mobile-nav-toggle {
-    display: block;
-    position: fixed;
-    top: var(--size-600);
-    right: var(--size-400);
-    cursor: pointer;
-    background: transparent;
-    border: 0;
-    padding: 0.5em;
-    width: 1.65em;
-    aspect-ratio: 1;
-
-    background-image: url("images/icon-hamburger.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  .mobile-nav-toggle[aria-expanded="true"] {
-    background-image: url("images/icon-close.svg");
-
-    z-index: 1;
-  }
+.primary-navigation[data-visible] {
+  visibility: visible;
 }
 
+.mobile-nav-toggle[aria-expanded="true"] {
+  background-image: url("images/icon-close.svg");
+  z-index: 4;
+  color: whitesmoke;
+}
+.nav-toggle[aria-expanded="true"] {
+  color: white;
+}
+.nav-toggle[aria-expanded="true"] span {
+  content: "Close"; /* Change the content to "Close" or any other text/icon */
+  color: white;
+  display: inline-block; /* Ensures the pseudo-element appears on the same line */
+}
+body.menu-open {
+  overflow: hidden;
+}
 /* hero section */
+.bg-text {
+  font-size: 16vw;
+
+  font-weight: var(--fw-bold);
+  margin-top: -3.5rem;
+  display: grid;
+  place-items: center;
+  margin-bottom: -25rem;
+  color: rgba(240, 240, 240, 0.664);
+  pointer-events: none;
+}
+
+.hero-area-bg {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgb(226, 226, 226) 100%);
+}
 .hero-image {
   display: grid;
   place-items: center;
@@ -270,18 +315,20 @@ p:not([class]) {
 }
 
 .hero-image img {
-  max-width: 90%;
+  max-width: 100%;
   max-height: 100%;
   width: auto;
   height: auto;
-  padding-top: var(--size-600);
+  transition: all 0.5s ease-in-out;
 }
 
 .hero-text {
   display: grid;
   place-items: center;
   justify-self: center;
-  padding: var(--size-500);
+
+  margin-top: 17rem;
+  transition: all 0.5s ease-in-out;
 }
 
 /* social list */
@@ -289,7 +336,7 @@ p:not([class]) {
   margin-top: 160px;
 } */
 .custom-hr {
-  width: 8em;
+  width: 22rem;
   height: 0.2em;
   background-color: var(--clr-primary-400);
 }
@@ -342,6 +389,9 @@ p:not([class]) {
   box-sizing: border-box;
 }
 
+.hero p {
+  max-width: 54ch;
+}
 @media (max-width: 80em) {
   .hero h1 {
     font-size: 2.5em;
@@ -351,6 +401,15 @@ p:not([class]) {
     max-height: 100%;
     width: auto; /* Allow the image to scale proportionally based on the specified max-width */
     height: auto;
+  }
+  .bg-text {
+    display: none;
+  }
+  .hero-text {
+    margin-top: 0;
+  }
+  .custom-hr {
+    width: 28vw;
   }
 }
 @media (max-width: 52em) {

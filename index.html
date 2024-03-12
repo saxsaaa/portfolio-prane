@@ -15,34 +15,38 @@
     <title>John Orland Prane</title>
   </head>
   <body>
-    <div class="landing-page-bg | bg-accent-100">
-      <header class="primary-header">
-        <div class="container margin-bottom-700">
-          <div class="nav-wrapper">
-            <a href="#" class="logo">
-              <img src="images/logo.png" alt="" />
-            </a>
-            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-              <span class="visually-hidden">Menu</span>
-            </button>
-            <nav class="primary-navigation" id="primary-navigation">
-              <ul aria-label="Primary" role="list" class="nav-list">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#">Projects</a></li>
-              </ul>
-            </nav>
-            <button class="button | display-sm-none display-md-inline-flex">Get Started</button>
+    <header class="primary-header">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="#" class="logo" aria-expanded="false">
+            <img src="images/logo.png" alt="" />
+          </a>
+          <div class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <span class=""> Menu</span>
+            <button class="mobile-nav-toggle"></button>
           </div>
-        </div>
-      </header>
 
-      <section class="hero margin-bottom-700">
+          <nav class="primary-navigation" id="primary-navigation ">
+            <ul aria-label="Primary" role="list" class="nav-list">
+              <li class=""><p>Menu</p></li>
+              <li class="nav-item"><a href="#">Home</a></li>
+              <li class="nav-item"><a href="#">About Me</a></li>
+              <li class="nav-item"><a href="#">Contact</a></li>
+              <li class="nav-item"><a href="#">Projects</a></li>
+            </ul>
+          </nav>
+          <button class="button | display-sm-none display-md-inline-flex visually-hidden">Get Started</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero margin-bottom-700 | hero-area-bg">
+        <div class="bg-text"><p>developer.</p></div>
         <div class="container">
           <div class="even-columns hero-wrapper">
             <div class="flow hero-text">
               <div class="paragraph-area">
-                <h1 class="hero-area text-primary-400 fs-primary-heading fw-bold">FRONT-END DEVELOPER</h1>
+                <h1 class="hero-area fs-primary-heading fw-bold">FRONT-END DEVELOPER</h1>
 
                 <div class="social-icons">
                   <hr class="custom-hr" />
@@ -70,14 +74,14 @@
                   </ul>
                 </div>
 
-                <p>Hello! I'm John Orland Prane, a dedicated front-end developer based in the Philippines.</p>
+                <p class="">Hello! I'm John Orland Prane, a dedicated front-end developer based in the Philippines.</p>
 
-                <p>
+                <p class="">
                   I'm passionate about bringing concepts to digital life and enhancing user experiences. Seeking a position to
                   leverage my skills in dynamic projects with a forward-thinking team.
                 </p>
 
-                <button class="button">Contact Me</button>
+                <button class="button">View Projects</button>
               </div>
             </div>
 
@@ -87,102 +91,103 @@
           </div>
         </div>
       </section>
-    </div>
 
-    <section class="tech-stack margin-bottom-700">
-      <div class="container">
-        <h3 class="fs-secondary-heading vertical-align-center fw-bold text-center margin-bottom-700">SKILLS</h3>
-        <div class="even-columns-skills">
-          <div class="box-tech-icon"><img src="svg/html.svg" alt="html" /></div>
-          <div class="box-tech-icon"><img src="svg/css.svg" alt="css" /></div>
-          <div class="box-tech-icon"><img src="svg/js.svg" alt="javascript" /></div>
-          <div class="box-tech-icon"><img src="svg/vite.svg" alt="" /></div>
-          <div class="box-tech-icon"><img src="svg/git.svg" alt="" /></div>
-          <div class="box-tech-icon"><img src="svg/vscode.svg" alt="" /></div>
-          <div class="box-tech-icon"><img src="svg/bootstrap.svg" alt="" /></div>
-          <div class="box-tech-icon"><img src="svg/github.svg" alt="" /></div>
+      <section class="tech-stack margin-bottom-700">
+        <div class="container">
+          <h3 class="fs-secondary-heading vertical-align-center fw-bold text-center margin-bottom-700">SKILLS</h3>
+          <div class="even-columns-skills">
+            <div class="box-tech-icon"><img src="svg/html.svg" alt="html" /></div>
+            <div class="box-tech-icon"><img src="svg/css.svg" alt="css" /></div>
+            <div class="box-tech-icon"><img src="svg/js.svg" alt="javascript" /></div>
+            <div class="box-tech-icon"><img src="svg/vite.svg" alt="" /></div>
+            <div class="box-tech-icon"><img src="svg/git.svg" alt="" /></div>
+            <div class="box-tech-icon"><img src="svg/vscode.svg" alt="" /></div>
+            <div class="box-tech-icon"><img src="svg/bootstrap.svg" alt="" /></div>
+            <div class="box-tech-icon"><img src="svg/github.svg" alt="" /></div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="container">
-        <div class="text-primary-400 fs-secondary-heading text-center">Projects</div>
-        <div class="even-columns margin-bottom-700">
-          <div><img src="images/mockup.png" alt="" /></div>
-          <div>
-            <p class="text-primary-400 fw-bold">Web Applications</p>
-            <p class="text-primary-400 fw-bold fs-600">Sample Project</p>
-            <p>
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-              of type and
-            </p>
-            <button class="button">visit</button>
+      <section>
+        <div class="container">
+          <div class="text-primary-400 fs-secondary-heading text-center">Projects</div>
+          <div class="even-columns margin-bottom-700">
+            <div><img src="images/mockup.png" alt="" /></div>
+            <div>
+              <p class="text-primary-400 fw-bold">Web Applications</p>
+              <p class="text-primary-400 fw-bold fs-600">Sample Project</p>
+              <p>
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                galley of type and
+              </p>
+              <button class="button">visit</button>
+            </div>
+          </div>
+          <div class="even-columns margin-bottom-700">
+            <div>
+              <p class="text-primary-400 fw-bold">Web Applications</p>
+              <p class="text-primary-400 fw-bold fs-600">Sample Project</p>
+              <p>
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                galley of type and
+              </p>
+              <button class="button">visit</button>
+            </div>
+            <div><img src="images/mockup.png" alt="" /></div>
+          </div>
+          <div class="even-columns margin-bottom-700">
+            <div><img src="images/mockup.png" alt="" /></div>
+            <div>
+              <p class="text-primary-400 fw-bold">Web Applications</p>
+              <p class="text-primary-400 fw-bold fs-600">Sample Project</p>
+              <p>
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                galley of type and
+              </p>
+              <button class="button">visit</button>
+            </div>
           </div>
         </div>
-        <div class="even-columns margin-bottom-700">
-          <div>
-            <p class="text-primary-400 fw-bold">Web Applications</p>
-            <p class="text-primary-400 fw-bold fs-600">Sample Project</p>
-            <p>
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-              of type and
-            </p>
-            <button class="button">visit</button>
-          </div>
-          <div><img src="images/mockup.png" alt="" /></div>
-        </div>
-        <div class="even-columns margin-bottom-700">
-          <div><img src="images/mockup.png" alt="" /></div>
-          <div>
-            <p class="text-primary-400 fw-bold">Web Applications</p>
-            <p class="text-primary-400 fw-bold fs-600">Sample Project</p>
-            <p>
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-              of type and
-            </p>
-            <button class="button">visit</button>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="container">
-        <div class="even-columns margin-bottom-700 about-me-wrapper">
-          <div class="grid-container about-image-area">
-            <div class="grid-item large-1" style="background-image: url('images/img2.jpg')"></div>
-            <div class="grid-item large-2" style="background-image: url('images/img1.JPEG')"></div>
-            <div class="grid-item small-1" style="background-image: url('images/img3.JPG')"></div>
-            <div class="grid-item small-2" style="background-image: url('images/profile-pic.png')"></div>
-          </div>
+      <section>
+        <div class="container">
+          <div class="even-columns margin-bottom-700 about-me-wrapper">
+            <div class="grid-container about-image-area">
+              <div class="grid-item large-1" style="background-image: url('images/img2.jpg')"></div>
+              <div class="grid-item large-2" style="background-image: url('images/img1.JPEG')"></div>
+              <div class="grid-item small-1" style="background-image: url('images/img3.JPG')"></div>
+              <div class="grid-item small-2" style="background-image: url('images/profile-pic.png')"></div>
+            </div>
 
-          <!-- <div>
-            <img src="images/profile-pic.png" alt="" />
-          </div> -->
-          <div class="about-me-area flow">
-            <h3 class="fs-secondary-heading fw-bold text-primary-400">About me</h3>
-            <p class="about-me-text">
-              Greetings, I'm John Orland Prane, a dedicated front-end developer with a Bachelor's degree in Information Technology
-              from Manuel S. Enverga University Foundation in Quezon, Philippines. Beyond my academic background, I bring a
-              versatile skill set that seamlessly blends technical expertise with a sharp eye for crafting engaging digital
-              experiences.
-            </p>
-            <p class="about-me-text">
-              Apart from tech, I find joy in delving into UI/UX design, where creativity meets functionality. It's my way of
-              adding a touch of artistry to the digital world. When I'm not immersed in coding or design, you'll likely find me in
-              the virtual realm, as I have a soft spot for video games.
-            </p>
-            <p class="about-me-text">
-              I thrive on turning imaginative concepts into practical, visually appealing websites, and I'm committed to infusing
-              innovation into every project. I'm eager to connect and explore how my skills can contribute to the success of your
-              digital endeavors. Looking forward to discussing potential opportunities for collaboration and growth.
-            </p>
-            <button class="button"><i class="fa-solid fa-file-lines"></i> Download CV</button>
+            <!-- <div>
+              <img src="images/profile-pic.png" alt="" />
+            </div> -->
+            <div class="about-me-area flow">
+              <h3 class="fs-secondary-heading fw-bold text-primary-400">About me</h3>
+              <p class="about-me-text">
+                Greetings, I'm John Orland Prane, a dedicated front-end developer with a Bachelor's degree in Information
+                Technology from Manuel S. Enverga University Foundation in Quezon, Philippines. Beyond my academic background, I
+                bring a versatile skill set that seamlessly blends technical expertise with a sharp eye for crafting engaging
+                digital experiences.
+              </p>
+              <p class="about-me-text">
+                Apart from tech, I find joy in delving into UI/UX design, where creativity meets functionality. It's my way of
+                adding a touch of artistry to the digital world. When I'm not immersed in coding or design, you'll likely find me
+                in the virtual realm, as I have a soft spot for video games.
+              </p>
+              <p class="about-me-text">
+                I thrive on turning imaginative concepts into practical, visually appealing websites, and I'm committed to
+                infusing innovation into every project. I'm eager to connect and explore how my skills can contribute to the
+                success of your digital endeavors. Looking forward to discussing potential opportunities for collaboration and
+                growth.
+              </p>
+              <button class="button"><i class="fa-solid fa-file-lines"></i> Download CV</button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <footer class="bg-primary-400 margin-top-900">
       <div class="footer-wrapper | container text-neutral-100">
@@ -249,4 +254,8 @@
   </body>
   <script type="module" src="/main.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- gsap animation -->
+  <script type="module" src="/gsap-animation.js"></script>
+  <!-- smooth scroll lenis -->
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
 </html>
