@@ -256,10 +256,13 @@ p:not([class]) {
   text-decoration: none;
   color: var(--clr-accent-300);
 }
+.navigation-container {
+  overflow: hidden !important;
+}
 
 .primary-navigation {
   visibility: hidden;
-  transform: translateY(2000px); /* Use translateY instead of y for GSAP */
+  transform: translateY(1000px); /* Use translateY instead of y for GSAP */
   position: fixed;
   padding: var(--size-600);
   inset: 0rem 0rem auto auto;
@@ -267,7 +270,7 @@ p:not([class]) {
   height: 100vh;
   margin-inline: auto;
   background: var(--clr-primary-400);
-  transition: visibility 5s; /* Added transform property */
+  /* Added transform property */
   z-index: -1;
 }
 
@@ -283,11 +286,7 @@ p:not([class]) {
 .nav-toggle[aria-expanded="true"] {
   color: white;
 }
-.nav-toggle[aria-expanded="true"] span {
-  content: "Close"; /* Change the content to "Close" or any other text/icon */
-  color: white;
-  display: inline-block; /* Ensures the pseudo-element appears on the same line */
-}
+
 body.menu-open {
   overflow: hidden;
 }
