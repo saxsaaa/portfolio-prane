@@ -530,6 +530,19 @@ body.menu-open {
   }
 }
 
+/* projects */
+.project-column {
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.project-image {
+  width: 100%;
+}
+.project-image img {
+  height: 30rem;
+}
 /* Footer */
 .footer-wrapper {
   padding: var(--size-800) 0;
@@ -884,4 +897,36 @@ body.menu-open {
   .text-center-sm-only p {
     margin-inline: auto;
   }
+}
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+  display: flex;
+  pointer-events: none; /* Disable pointer events on the overlay */
+}
+
+.bar {
+  width: 100vw;
+  height: 100vh;
+  background: var(--clr-primary-400);
+  pointer-events: none; /* Disable pointer events on the bars */
+}
+
+#preloader {
+  background: #1a1a1a url("/images/loader.gif") no-repeat center center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  overflow: hidden !important;
+  transition: opacity 0.5s ease;
+  opacity: 1;
+  pointer-events: none; /* Disable pointer events on the preloader */
+}
+
+#preloader.hidden {
+  opacity: 0;
+  pointer-events: none; /* Disable pointer events when hidden */
 }
