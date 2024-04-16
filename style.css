@@ -510,83 +510,53 @@ body.menu-open {
 .tech-item img {
   width: 4.5rem;
   height: 4.5rem;
+  transition: all 0.5s ease-in-out;
 }
 .tech-item p {
   margin-top: 1.5rem;
   text-align: center;
 }
-
-/* .box-tech-icon {
-  background-color: var(--clr-primary-400);
-  padding: var(--size-500);
-  border-radius: 1em;
-
-  transition: -webkit-transform 0.4s, transform 0.4s;
+.framework-title {
+  transition: all 0.5s ease-in-out;
 }
-
-.even-columns-skills {
-  display: grid;
-
-  gap: 1rem;
+.tools-image {
+  transition: all 0.5s ease-in-out;
 }
-
-.box-tech-icon:hover,
-.box-tech-icon:focus-visible {
-  background-color: var(--clr-accent-300);
-  transform: scale(1.2);
-}
-
-@media (min-width: 47em) {
-  .even-columns-skills {
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
+@media (max-width: 80em) {
+  .framework-title {
+    font-size: 3rem !important;
+  }
+  .tools-image {
+    align-self: center;
+  }
+  .tech-container {
+    padding: 0;
+  }
+  .tools-column {
     gap: 1rem;
-    place-items: center;
   }
-
-  .box-tech-icon {
-    max-width: 100%;
-    width: 76%;
+  .tech-item img {
+    width: 3.5rem;
+    height: 3.5rem;
   }
-}
-@media (max-width: 87em) {
-  .even-columns-skills {
-    grid-auto-flow: row;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem 0rem;
-    place-items: center;
-  }
-
-  .box-tech-icon {
-    max-width: 100%;
-    width: 45%;
+  .tech-stack {
+    padding: 5rem 1rem 5rem 1rem;
   }
 }
 @media (max-width: 47em) {
-  .even-columns-skills {
-    place-items: center;
-    grid-auto-flow: row;
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .box-tech-icon {
-    max-width: 100%;
-    width: 55%;
+  .framework-title {
+    font-size: 2rem !important;
   }
 }
-
-@media (max-width: 35em) {
-  .even-columns-skills {
-    place-items: center;
-    grid-auto-flow: row;
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 26em) {
+  .framework-title {
+    background-color: red;
   }
-  .box-tech-icon {
-    max-width: 100%;
-    width: 55%;
-    padding: var(--size-400);
+  .tech-item {
+    flex-basis: calc(33.33% - 1rem); /* Calculate one-third width with a gap of 1rem */
+    max-width: calc(33.33% - 1rem); /* Same as flex-basis for better compatibility */
   }
-} */
-
+}
 /* projects */
 .project-column {
   display: grid;
