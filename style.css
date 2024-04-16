@@ -1,6 +1,6 @@
 :root {
   --clr-accent-500: hsl(210, 55%, 18%);
-  --clr-accent-400: hsl(210, 68%, 20%);
+  --clr-accent-400: hsl(210, 71%, 30%);
   --clr-accent-300: #fc6736;
   --clr-accent-100: #f7f5f5;
 
@@ -339,6 +339,7 @@ body.menu-open {
   width: 22rem;
   height: 0.2em;
   background-color: var(--clr-primary-400);
+  transition: all 0.5s ease-in-out;
 }
 .social-icons {
   display: flex;
@@ -393,8 +394,8 @@ body.menu-open {
   max-width: 54ch;
 }
 @media (max-width: 80em) {
-  .hero h1 {
-    font-size: 2.5em;
+  .hero-area {
+    font-size: 3.4rem !important;
   }
   .hero-image img {
     max-width: 100%;
@@ -419,6 +420,19 @@ body.menu-open {
 }
 
 @media (max-width: 47em) {
+  .hero {
+    margin-bottom: 2rem;
+  }
+  .hero-text {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    margin-left: auto; /* Optional: Align to the right */
+    margin-right: auto; /* Optional: Align to the left */
+  }
   .image-area {
     grid-area: image;
   }
@@ -443,14 +457,14 @@ body.menu-open {
     margin-top: 0rem;
   }
 
-  .hero h1 {
-    font-size: 1.4rem;
+  .hero-area {
+    font-size: 2rem !important;
   }
   .hero p {
     max-width: 80ch;
   }
   .custom-hr {
-    width: 4em;
+    width: 0em;
   }
 }
 @media (max-width: 20em) {
@@ -459,6 +473,10 @@ body.menu-open {
   }
 }
 /* skills */
+.tech-stack {
+  background-color: var(--clr-neutral-200);
+  padding: 5rem;
+}
 .tools-area {
   align-self: center;
 }
@@ -473,9 +491,7 @@ body.menu-open {
     grid-auto-columns: 1fr;
   }
 }
-.framework-title {
-  margin-top: 5rem;
-}
+
 .tech-container {
   display: flex;
   flex-wrap: wrap;
@@ -760,6 +776,12 @@ body.menu-open {
 }
 
 /* about me */
+
+.about-section {
+  margin-top: 5rem;
+  background-color: var(--clr-neutral-200);
+  padding: 10rem;
+}
 .about-me-wrapper {
   height: 150%;
 }
@@ -1047,4 +1069,20 @@ body.menu-open {
 #preloader.hidden {
   opacity: 0;
   pointer-events: none; /* Disable pointer events when hidden */
+}
+
+.contact-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--clr-accent-400);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
 }
