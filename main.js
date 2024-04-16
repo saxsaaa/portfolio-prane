@@ -102,17 +102,25 @@ $(document).ready(function () {
   });
 });
 
-// makes the project grid center the last item if i have odd number of projects
 window.addEventListener("DOMContentLoaded", function () {
   const projectItems = document.querySelectorAll(".project-item");
 
   function updateGrid() {
-    if (projectItems.length % 2 !== 0) {
-      // If the number of items is odd, center the last item
-      projectItems[projectItems.length - 1].style.gridColumn = "1 / span 2";
-      projectItems[projectItems.length - 1].style.justifySelf = "center";
+    // Check if viewport width matches media query conditions
+    if (window.matchMedia("(min-width: 71em)").matches) {
+      if (projectItems.length % 2 !== 0) {
+        // If the number of items is odd, center the last item
+        projectItems[projectItems.length - 1].style.gridColumn = "1 / span 2";
+        projectItems[projectItems.length - 1].style.justifySelf = "center";
+      } else {
+        // Reset styles if there are even number of items
+        projectItems.forEach((item) => {
+          item.style.gridColumn = "";
+          item.style.justifySelf = "";
+        });
+      }
     } else {
-      // Reset styles if there are even number of items
+      // Reset styles for smaller viewport widths
       projectItems.forEach((item) => {
         item.style.gridColumn = "";
         item.style.justifySelf = "";
@@ -122,6 +130,9 @@ window.addEventListener("DOMContentLoaded", function () {
 
   // Call the function initially
   updateGrid();
+
+  // Listen for window resize events to update the grid
+  window.addEventListener("resize", updateGrid);
 });
 
 window.addEventListener("DOMContentLoaded", function () {
