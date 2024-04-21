@@ -20,9 +20,14 @@
     <div class="overlay">
       <div class="bar"></div>
     </div>
-    <div class="contact-button">
-      <i class="fa-solid fa-envelope"></i>
+    <div class="contact-button" onclick="window.location.href='mailto:orland.prane@gmail.com';">
+      <div class="mail-area">
+        <i class="fa-solid fa-envelope"></i>
+      </div>
     </div>
+    <a href="#" id="hidden-button" class="hidden back-to-top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
     <header class="primary-header">
       <div class="container navigation-container">
         <div class="nav-wrapper">
@@ -38,9 +43,9 @@
             <ul aria-label="Primary" role="list" class="nav-list">
               <li class=""><p>Menu</p></li>
               <li class="nav-item"><a href="#">Home</a></li>
-              <li class="nav-item"><a href="#">About Me</a></li>
-              <li class="nav-item"><a href="#">Contact</a></li>
-              <li class="nav-item"><a href="#">Projects</a></li>
+              <li class="nav-item"><a href="#tools-wrapper">Tools</a></li>
+              <li class="nav-item"><a href="#project-wrapper">Projects</a></li>
+              <li class="nav-item"><a href="#about-wrapper">About Me</a></li>
             </ul>
           </nav>
           <button class="button | display-sm-none display-md-inline-flex visually-hidden">Get Started</button>
@@ -49,14 +54,14 @@
     </header>
     <main>
       <section class="hero | hero-area-bg">
-        <div class="bg-text"><p>developer.</p></div>
+        <div class="hero-animation | bg-text"><p>developer.</p></div>
         <div class="container">
           <div class="even-columns hero-wrapper">
             <div class="flow hero-text">
               <div class="paragraph-area">
-                <h1 class="hero-area fs-primary-heading fw-black">FRONT-END DEVELOPER</h1>
+                <h1 class="hero-animation hero-area fs-primary-heading fw-black">FRONT-END DEVELOPER</h1>
 
-                <div class="social-icons">
+                <div class="social-icons hero-animation">
                   <hr class="custom-hr" />
                   <ul>
                     <li id="facebookIcon">
@@ -82,25 +87,26 @@
                   </ul>
                 </div>
 
-                <p class="">Hello! I'm John Orland Prane, a dedicated front-end developer based in the Philippines.</p>
-
-                <p class="">
-                  I'm passionate about bringing concepts to digital life and enhancing user experiences. Seeking a position to
-                  leverage my skills in dynamic projects with a forward-thinking team.
+                <p class="hero-animation">
+                  Hello! I'm John Orland Prane, a dedicated front-end developer based in the Philippines.
                 </p>
 
-                <button class="button">View Projects</button>
+                <p class="hero-animation">
+                  I'm passionate about bringing concepts to digital life and enhancing user experiences. Seeking a position to
+                  leverage my skills in dynamic projects with a forward-thinking team.
+                  <br /><button class="button">View Projects</button>
+                </p>
               </div>
             </div>
 
-            <div class="hero-image image-area">
+            <div class="hero-animation hero-image image-area">
               <img src="images/ME.png" alt="" />
             </div>
           </div>
         </div>
       </section>
 
-      <section class="tech-stack">
+      <section class="tech-stack" id="tools-wrapper">
         <div class="container">
           <h3 class="framework-title | fs-primary-heading vertical-align-center fw-black text-center">
             TOOLS AND <span><br />FRAMEWORKS</span>
@@ -108,7 +114,7 @@
           <div class="tools-column">
             <div class="tools-image"><img src="svg/programming.svg" alt="" /></div>
             <div class="tools-area">
-              <p>Development Stack</p>
+              <p class="tools-image tools-title">Development Stack</p>
               <div class="tech-container">
                 <div class="tech-item">
                   <img src="svg/html.svg" alt="" />
@@ -148,11 +154,11 @@
         </div>
       </section>
 
-      <section>
+      <section id="project-wrapper" class="project-area-trigger">
         <div class="container">
           <div class="project-title | margin-top-900 fs-primary-heading vertical-align-center fw-black text-center">
-            Sample <br />
-            Projects
+            <span>Sample</span> <br />
+            <span>Projects</span>
           </div>
           <div class="project-column margin-bottom-700">
             <div class="project-item">
@@ -241,7 +247,7 @@
         </div>
       </section>
 
-      <section class="about-section">
+      <section class="about-section" id="about-wrapper">
         <div class="container">
           <div class="even-columns about-me-wrapper">
             <div class="grid-container about-image-area">
@@ -281,25 +287,24 @@
       <div class="footer-wrapper | container text-neutral-100">
         <div class="even-columns margin-bottom-700">
           <div class="footer-text-area">
-            <p class="fs-300 margin-bottom-300">LIKE WHAT YOU SEE?</p>
-            <p class="fs-600 fw-bold margin-bottom-300">LET’S WORK TOGETHER</p>
+            <p class="fs-300 margin-bottom-300">LIKE WHAT YOU'VE SEEN?</p>
+            <p class="fs-600 fw-bold margin-bottom-300">LET’S CONNECT</p>
             <p class="text-neutral-200">
-              Actively seeking job opportunities. Reach out, and let's explore how I can contribute to your team's success.
+              Actively seeking job opportunities and eager to explore how I can make a meaningful impact. Reach out.
             </p>
           </div>
           <div class="secondary-nav-area">
             <p class="fs-300">MISSING SOMETHING?</p>
             <p class="fs-600 fw-bold">MENU</p>
-            <p class="fs-300">HOME</p>
-            <p class="fs-300">PROJECTS</p>
-            <p class="fs-300">ABOUT</p>
+            <p class="fs-300"><a href="#">HOME</a></p>
+            <p class="fs-300"><a href="#tools-wrapper">TOOLS</a></p>
+            <p class="fs-300"><a href="#project-wrapper">PROJECTS</a></p>
+            <p class="fs-300"><a href="#about-wrapper">ABOUT</a></p>
           </div>
-          <div class="contacts-area">
+          <!-- <div class="contacts-area">
             <div class="contacts-card" onclick="window.location.href='mailto:orland.prane@gmail.com';">
               <div class="mail-area">
-                <i class="fa-solid fa-envelope"></i>
                 <a class="contacts-label" href="mailto:john.orland@gmail.com">orland.prane@gmail.com</a>
-                <i class="text-right | fa-solid fa-caret-right"></i>
               </div>
             </div>
 
@@ -310,7 +315,7 @@
                 <i class="fa-solid fa-caret-right"></i>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="social-icons">
           <hr class="footer-custom-hr" />

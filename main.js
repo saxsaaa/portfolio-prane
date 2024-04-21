@@ -92,15 +92,15 @@ navToggle.addEventListener("click", () => {
   }
 });
 
-$(document).ready(function () {
-  $("li").click(function (event) {
-    var socialMediaLink = $(this).find("a").attr("href");
-    if (socialMediaLink) {
-      event.preventDefault();
-      window.open(socialMediaLink, "_blank");
-    }
-  });
-});
+// $(document).ready(function () {
+//   $("li").click(function (event) {
+//     var socialMediaLink = $(this).find("a").attr("href");
+//     if (socialMediaLink) {
+//       event.preventDefault();
+//       window.open(socialMediaLink, "_blank");
+//     }
+//   });
+// });
 
 window.addEventListener("DOMContentLoaded", function () {
   const projectItems = document.querySelectorAll(".project-item");
@@ -149,4 +149,15 @@ window.addEventListener("DOMContentLoaded", function () {
 
   // Add event listener to resize event to monitor changes
   window.addEventListener("resize", logFontSize);
+});
+
+window.addEventListener("scroll", function () {
+  var hiddenDiv = document.getElementById("hidden-button");
+  // Adjust this value according to where you want the scroll point to be
+  var scrollPoint = 1000;
+  if (window.scrollY > scrollPoint) {
+    hiddenDiv.classList.remove("hidden");
+  } else {
+    hiddenDiv.classList.add("hidden");
+  }
 });
