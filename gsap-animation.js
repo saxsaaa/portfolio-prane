@@ -63,16 +63,29 @@ gsap.from(".hero-animation", {
 });
 
 // tools and framework animation
-gsap.from(".framework-title", {
+gsap.from(".framework-title-animation-left", {
   delay: 1,
   duration: 1,
-  y: 1000,
-
+  xPercent: -10,
+  opacity: 0,
   scrollTrigger: {
     trigger: ".framework-title",
     markers: false,
     start: "top 90%",
-    end: " bottom -500px",
+    end: " 40% 100%",
+    scrub: true,
+  },
+});
+gsap.from(".framework-title-animation-right", {
+  delay: 1,
+  duration: 1,
+  xPercent: 10,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: ".framework-title",
+    markers: false,
+    start: "top 90%",
+    end: " 40% 100%",
     scrub: true,
   },
 });
@@ -105,29 +118,55 @@ gsap.from(".tech-item", {
 });
 
 //project area animation
-gsap.from(".project-title", {
+gsap.from(".project-title-animation-left", {
   delay: 1,
   duration: 1,
-  y: 1000,
+  xPercent: -10,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: ".project-area-trigger",
+    markers: true,
+    start: "top 90%",
+    end: " 40% 100%",
+    scrub: true,
+  },
+});
+gsap.from(".project-title-animation-right", {
+  delay: 1,
+  duration: 1,
+  xPercent: 10,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: ".project-area-trigger",
+    markers: true,
+    start: "top 90%",
+    end: " 40% 100%",
+    scrub: true,
+  },
+});
+gsap.from(".project-item-animation-v1", {
+  duration: 2,
+  yPercent: 100,
+  opacity: 0,
 
   scrollTrigger: {
     trigger: ".project-area-trigger",
     markers: false,
-    start: "top 100%",
-    end: "top 80%",
+    start: "5% 100%",
+    end: "27% 80%",
     scrub: true,
   },
 });
-gsap.from(".project-item", {
-  delay: 1,
-  duration: 1,
-  y: 1000,
+gsap.from(".project-item-animation-v2", {
+  duration: 2,
+  yPercent: 100,
+  opacity: 0,
 
   scrollTrigger: {
-    trigger: ".project-area-trigger",
-    markers: true,
-    start: "20% 100%",
-    end: "20% 80%",
+    trigger: ".project-item-animation-v2",
+    markers: false,
+    start: "-100% 100%",
+    end: "-80% 80%",
     scrub: true,
   },
 });
