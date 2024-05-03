@@ -55,12 +55,16 @@ window.addEventListener("beforeunload", function () {
 
 // animationssss
 //hero section
-gsap.from(".hero-animation", {
-  delay: 1,
+// gsap.from(".hero-animation", {
+//   delay: 1,
 
-  y: 1400,
-  stagger: 0.1,
-});
+//   y: 1400,
+//   stagger: 0.1,
+//   onStart: function () {
+//     // Set z-index to control stacking order before animation starts
+//     gsap.set(".hero-animation", { zIndex: 1 });
+//   },
+// });
 
 // tools and framework animation
 gsap.from(".framework-title-animation-left", {
@@ -125,7 +129,7 @@ gsap.from(".project-title-animation-left", {
   opacity: 0,
   scrollTrigger: {
     trigger: ".project-area-trigger",
-    markers: true,
+    markers: false,
     start: "top 90%",
     end: " 40% 100%",
     scrub: true,
@@ -138,7 +142,7 @@ gsap.from(".project-title-animation-right", {
   opacity: 0,
   scrollTrigger: {
     trigger: ".project-area-trigger",
-    markers: true,
+    markers: false,
     start: "top 90%",
     end: " 40% 100%",
     scrub: true,
@@ -167,6 +171,34 @@ gsap.from(".project-item-animation-v2", {
     markers: false,
     start: "-100% 100%",
     end: "-80% 80%",
+    scrub: true,
+  },
+});
+
+//about me animation
+gsap.from(".about-text-animation", {
+  duration: 2,
+  yPercent: 100,
+  opacity: 0,
+  stagger: 3,
+  scrollTrigger: {
+    trigger: ".about-text-animation",
+    markers: false,
+    start: "-100% 100%",
+    end: "400% 70%",
+    scrub: true,
+  },
+});
+gsap.from(".about-image-animation", {
+  duration: 2,
+  yPercent: 100,
+  opacity: 0,
+  stagger: 3,
+  scrollTrigger: {
+    trigger: ".about-image-animation",
+    markers: false,
+    start: "-100% 100%",
+    end: "100% 70%",
     scrub: true,
   },
 });

@@ -273,7 +273,7 @@ p:not([class]) {
   margin-inline: auto;
   background: var(--clr-primary-400);
   /* Added transform property */
-  z-index: -1;
+  z-index: 2;
 }
 
 .primary-navigation[data-visible] {
@@ -293,6 +293,7 @@ body.menu-open {
   overflow: hidden;
 }
 /* hero section */
+
 .bg-text {
   font-size: 16vw;
 
