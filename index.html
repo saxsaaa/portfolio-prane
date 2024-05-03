@@ -94,7 +94,7 @@
                 <p class="hero-animation">
                   I'm passionate about bringing concepts to digital life and enhancing user experiences. Seeking a position to
                   leverage my skills in dynamic projects with a forward-thinking team.
-                  <br /><button class="button">View Projects</button>
+                  <br /><br /><a href="#project-wrapper"><button class="button">View Projects</button></a>
                 </p>
               </div>
             </div>
@@ -179,13 +179,13 @@
                 </div>
                 <div class="btn-group-project">
                   <a target="_blank" href="https://saxsaaa.github.io/epic-fitness/"
-                    ><button class="project-button-1">Preview</button></a
-                  >
+                    ><button class="project-button-1">Preview</button>
+                  </a>
                   <a href="https://github.com/saxsaaa/epic-fitness" target="_blank" rel="noopener noreferrer"
                     ><button class="project-button-2">
                       <span></span><i class="fa-brands fa-github" style="margin-right: 4px"></i> Github
-                    </button></a
-                  >
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -202,10 +202,21 @@
                   <p class="tags">Vite</p>
                 </div>
                 <div class="btn-group-project">
-                  <button class="project-button-1">Preview</button>
-                  <button class="project-button-2">
-                    <span></span><i class="fa-brands fa-github" style="margin-right: 4px"></i> Github
-                  </button>
+                  <a
+                    href="https://saxsaaa.github.io/frontend-mentor-manage-landing-page/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><button class="project-button-1">Preview</button>
+                  </a>
+                  <a
+                    href="https://github.com/saxsaaa/frontend-mentor-manage-landing-page"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button class="project-button-2">
+                      <span></span><i class="fa-brands fa-github" style="margin-right: 4px"></i> Github
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -222,11 +233,11 @@
                 </div>
                 <div class="btn-group-project">
                   <a href="#"><button class="project-button-1">Preview</button></a>
-                  <a href="https://github.com/saxsaaa/portfolio-prane" target="_blank" rel="noopener noreferrer"
-                    ><button class="project-button-2">
+                  <a href="https://github.com/saxsaaa/portfolio-prane" target="_blank" rel="noopener noreferrer">
+                    <button class="project-button-2">
                       <span></span><i class="fa-brands fa-github" style="margin-right: 4px"></i> Github
-                    </button></a
-                  >
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -284,7 +295,8 @@
                 infusing innovation into every project. I'm eager to connect and explore how my skills can contribute to the
                 success of your digital endeavors. Looking forward to discussing potential opportunities for collaboration and
                 growth. <br />
-                <button class="button"><i class="fa-solid fa-file-lines"></i> Download CV</button>
+                <button id="download-resume" class="button"><i class="fa-solid fa-file-lines"></i> Download Resume</button>
+                <a id="downloadLink" style="display: none"></a>
               </p>
             </div>
           </div>
@@ -354,10 +366,12 @@
       </div>
     </footer>
   </body>
-  <script type="module" src="/main.js"></script>
+  <script type="module" src="main.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- gsap animation -->
-  <script type="module" src="/gsap-animation.js"></script>
+  <script type="module" src="gsap-animation.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <!-- smooth scroll lenis -->
   <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
 </html>

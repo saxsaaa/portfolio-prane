@@ -1,5 +1,3 @@
-import { gsap } from "gsap";
-
 const navToggle = document.querySelector(".mobile-nav-toggle");
 const menuToggle = document.querySelector(".nav-toggle");
 const primaryNav = document.querySelector(".primary-navigation");
@@ -41,6 +39,10 @@ navToggle.addEventListener("click", () => {
       },
     });
     tl.play(); // Play the timeline
+    document.documentElement.style.height = "100%";
+    document.body.style.height = "100%";
+    document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
   } else {
     // Create a timeline for closing the navigation
     var tl = gsap.timeline();
@@ -60,6 +62,13 @@ navToggle.addEventListener("click", () => {
       },
     });
     tl.play(); // Play the timeline
+    // Revert CSS properties to original when navigation is hidden
+    document.documentElement.style.height = "";
+    document.body.style.height = "";
+    document.documentElement.style.overflowX = "hidden";
+    document.body.style.overflowX = "hidden";
+    document.documentElement.style.overflowY = "auto";
+    document.body.style.overflowY = "auto";
   }
 
   // Set flag for nav-items animation
@@ -160,4 +169,19 @@ window.addEventListener("scroll", function () {
   } else {
     hiddenDiv.classList.add("hidden");
   }
+});
+
+document.getElementById("download-resume").addEventListener("click", function () {
+  // Set the file URL
+  var fileURL = "public/Prane-John-Orland-Resume.pdf";
+  // Set the file name
+  var fileName = "Prane,John Orland-Resume";
+
+  // Set the anchor tag's href and download attributes
+  var downloadLink = document.getElementById("downloadLink");
+  downloadLink.href = fileURL;
+  downloadLink.download = fileName;
+
+  // Trigger the anchor tag's click event to start the download
+  downloadLink.click();
 });
