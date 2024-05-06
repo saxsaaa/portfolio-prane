@@ -1,34 +1,92 @@
 const navToggle = document.querySelector(".mobile-nav-toggle");
 const menuToggle = document.querySelector(".nav-toggle");
 const primaryNav = document.querySelector(".primary-navigation");
-
 const logoLink = document.querySelector(".logo");
 
 let isNavigationInProgress = false;
 let isNavItemsAnimationInProgress = false;
 
-navToggle.addEventListener("click", () => {
+// eventlistener for the menu button to be open and close
+navToggle.addEventListener("click", toggleNavigation);
+
+function toggleNavigation() {
   if (isNavigationInProgress || isNavItemsAnimationInProgress) {
     return;
   }
-
-  // Toggles navigation animation status
-  console.log(`Navigation Animation status before: ${isNavigationInProgress ? "In progress" : "Not in progress"}`);
-  console.log(`Nav-Items Animation status before: ${isNavItemsAnimationInProgress ? "In progress" : "Not in progress"}`);
+  toggleLogoExpansion();
+  animateNavItems();
 
   isNavigationInProgress = true;
 
+  // Toggle navigation visibility attributes
   const isNavVisible = primaryNav.hasAttribute("data-visible");
-  navToggle.setAttribute("aria-expanded", !isNavVisible);
   primaryNav.toggleAttribute("data-visible");
+  navToggle.setAttribute("aria-expanded", !isNavVisible);
   menuToggle.setAttribute("aria-expanded", !isNavVisible);
 
+  // Update menu toggle button text
   const spanElement = menuToggle.querySelector("span");
   spanElement.textContent = isNavVisible ? "Menu" : "Close";
 
   if (!isNavVisible) {
+    openNavigation();
+  } else if (isNavVisible) {
+    closeNavigation();
+  }
+
+  navLinkClickHandler();
+}
+
+// Function to handle clicks on navigation links
+function navLinkClickHandler() {
+  // Get all navigation links
+  const navLinks = document.querySelectorAll(".primary-navigation .nav-item a");
+  // Remove and re-add event listeners to handle clicks
+  navLinks.forEach((link) => {
+    link.removeEventListener("click", toggleNavigation);
+  });
+  navLinks.forEach((link) => {
+    link.addEventListener("click", toggleNavigation);
+  });
+}
+
+function toggleLogoExpansion() {
+  // Toggle aria-expanded attribute for logo
+  const isLogoExpanded = logoLink.getAttribute("aria-expanded") === "true";
+  logoLink.setAttribute("aria-expanded", String(!isLogoExpanded));
+
+  // Change logo image source based on expansion state
+  const logoImage = logoLink.querySelector("img");
+  const newSrc = isLogoExpanded ? "images/logo.png" : "images/logo-white.png";
+
+  // Determine the animation duration based on expansion state
+  const duration = isLogoExpanded ? 0.35 : 0.7;
+  gsap.to(logoImage, {
+    duration: duration,
+    onComplete: () => {
+      logoImage.src = newSrc;
+    },
+  });
+}
+
+function animateNavItems() {
+  // Animate navigation items
+  isNavItemsAnimationInProgress = true;
+  gsap.from(".nav-item", {
+    duration: 0.8,
+    stagger: 0.1,
+    opacity: 0,
+    x: 600,
+    onComplete: () => {
+      isNavItemsAnimationInProgress = false; // Reset flag when animation is complete
+      console.log("Nav-Items Animation completed");
+    },
+  });
+}
+function openNavigation() {
+  try {
     // Create a timeline for opening the navigation
-    var tl = gsap.timeline();
+    let tl = gsap.timeline();
     tl.to(".primary-navigation", {
       duration: 1,
       y: 0,
@@ -39,13 +97,19 @@ navToggle.addEventListener("click", () => {
       },
     });
     tl.play(); // Play the timeline
-    document.documentElement.style.height = "100%";
-    document.body.style.height = "100%";
-    document.documentElement.style.overflow = "hidden";
-    document.body.style.overflow = "hidden";
-  } else {
+
+    // Disable scrolling while navigation is open
+    disableScroll();
+  } catch (error) {
+    console.error("Error opening navigation:", error);
+    // Optionally handle the error or provide fallback behavior
+  }
+}
+// Function to close the navigation
+function closeNavigation() {
+  try {
     // Create a timeline for closing the navigation
-    var tl = gsap.timeline();
+    let tl = gsap.timeline();
     tl.to(".primary-navigation", {
       duration: 1,
       y: -2000,
@@ -62,54 +126,31 @@ navToggle.addEventListener("click", () => {
       },
     });
     tl.play(); // Play the timeline
-    // Revert CSS properties to original when navigation is hidden
-    document.documentElement.style.height = "";
-    document.body.style.height = "";
-    document.documentElement.style.overflowX = "hidden";
-    document.body.style.overflowX = "hidden";
-    document.documentElement.style.overflowY = "auto";
-    document.body.style.overflowY = "auto";
+    enableScroll();
+  } catch (error) {
+    console.error("Error closing navigation: ", error);
   }
-
-  // Set flag for nav-items animation
-  isNavItemsAnimationInProgress = true;
-  gsap.from(".nav-item", {
-    duration: 0.8,
-    stagger: 0.1,
-    opacity: 0,
-    x: 600,
-    onComplete: () => {
-      isNavItemsAnimationInProgress = false; // Reset flag when animation is complete
-      console.log("Nav-Items Animation completed");
-    },
-  });
-
-  // Toggle aria-expanded attribute for logo
-  const isLogoExpanded = logoLink.getAttribute("aria-expanded") === "true";
-  logoLink.setAttribute("aria-expanded", String(!isLogoExpanded));
-
-  // Change src attribute based on aria-expanded value
-  const logoImage = logoLink.querySelector("img");
-  if (isLogoExpanded) {
-    setTimeout(() => {
-      logoImage.src = "images/logo.png"; // Change to original source when not expanded
-    }, 350); // Add a delay
-  } else {
-    setTimeout(() => {
-      logoImage.src = "images/logo-white.png"; // Change to new source when expanded
-    }, 700); // Add a delay
-  }
-});
-
-// $(document).ready(function () {
-//   $("li").click(function (event) {
-//     var socialMediaLink = $(this).find("a").attr("href");
-//     if (socialMediaLink) {
-//       event.preventDefault();
-//       window.open(socialMediaLink, "_blank");
-//     }
-//   });
-// });
+}
+function disableScroll() {
+  // Disable scrolling while navigation is open
+  document.documentElement.style.height = "100%";
+  document.body.style.height = "100%";
+  document.documentElement.style.overflow = "hidden";
+  document.body.style.overflow = "hidden";
+}
+function enableScroll() {
+  // Re-enable scrolling when navigation is closed
+  document.documentElement.style.height = "";
+  document.body.style.height = "";
+  document.documentElement.style.overflowX = "hidden";
+  document.body.style.overflowX = "hidden";
+  document.documentElement.style.overflowY = "auto";
+  document.body.style.overflowY = "auto";
+}
+function handleGsapLoadError() {
+  console.error("Error loading GSAP library");
+  // Provide fallback or inform the user
+}
 
 window.addEventListener("DOMContentLoaded", function () {
   const projectItems = document.querySelectorAll(".project-item");

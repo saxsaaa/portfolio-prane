@@ -15,6 +15,11 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
+function handleGsapLoadError() {
+  console.error("Error loading GSAP library");
+  // Provide fallback or inform the user
+}
+
 // Preloader functionality
 window.onload = function () {
   try {
