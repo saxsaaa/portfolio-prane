@@ -43,11 +43,27 @@ function navLinkClickHandler() {
   const navLinks = document.querySelectorAll(".primary-navigation .nav-item a");
   // Remove and re-add event listeners to handle clicks
   navLinks.forEach((link) => {
-    link.removeEventListener("click", toggleNavigation);
+    event.preventDefault();
+    link.removeEventListener("click", handleNavigation);
   });
   navLinks.forEach((link) => {
-    link.addEventListener("click", toggleNavigation);
+    event.preventDefault();
+    link.addEventListener("click", handleNavigation);
   });
+}
+
+function handleNavigation(event) {
+  event.preventDefault(); // Prevent the default behavior of the anchor tag
+  toggleNavigation(); // Toggle the navigation
+
+  const href = this.getAttribute("href"); // Get the href attribute of the clicked link
+
+  // Wait for the navigation animation to complete (if any)
+
+  // Once the animation is complete, navigate to the link's destination
+  setTimeout(() => {
+    window.location.href = href;
+  }, 350); // Adjust the delay time as needed
 }
 
 function toggleLogoExpansion() {

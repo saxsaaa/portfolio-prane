@@ -95,24 +95,34 @@ gsap.from(".framework-title-animation-right", {
   },
 });
 gsap.from(".tools-image", {
+  y: 100,
+
+  scrollTrigger: {
+    trigger: ".tools-image",
+    markers: false,
+    start: "-70% center",
+    end: "-70% center",
+    scrub: true,
+  },
+});
+gsap.from(".tech-item-group-1", {
   delay: 1,
-  duration: 1,
+
   y: 1000,
 
   scrollTrigger: {
     trigger: ".tools-image",
     markers: false,
-    start: "top 95%",
-    end: " bottom -500px",
+    start: "top 80%",
+    end: "55% 90%",
     scrub: true,
   },
 });
-
-gsap.from(".tech-item", {
+gsap.from(".tech-item-group-2", {
   delay: 1,
-  duration: 5,
+
   y: 1000,
-  stagger: 3,
+
   scrollTrigger: {
     trigger: ".tools-image",
     markers: false,
