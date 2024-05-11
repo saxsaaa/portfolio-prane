@@ -1092,7 +1092,7 @@ body.menu-open {
 }
 
 #preloader {
-  background: #1a1a1a url("/images/loader.gif") no-repeat center center;
+  background: #1a1a1a url("../images/loader.gif") no-repeat center center;
   height: 100vh;
   width: 100%;
   position: fixed;
